@@ -2,11 +2,8 @@
 <HTML>
 <head>
 <title>View Certifications</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="CSS/site.css">
 </head>
 
 
@@ -76,72 +73,15 @@
   </ul>
 </div>
 </nav>
+
+</body>
+</HTML>
 <main>
 
 <hr>
 
 
-<div class="container"id="certRecordsApp">
-  <div class="row">
-    <table class="table table-dark">
-      <thead>
-                    <tr>
-                      <th>Certification ID</th>
-                      <th>Certificate Name</th>
-                      <th>Certification Agency</th>
-                      <th>Expiration</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="c in certifications" @click="handleRowClick(c)">
-                      <td>{{c.certId}}</td>
-                      <td>{{c.certName}}</td>
-                      <td>{{c.certAgency}}</td>
-                      <td>{{c.cerDefaultExp}}</td>
-                    </tr>
-                  </tbody>
 
-    </table>
-  </div>
-  <div class="formsArea">
-    <h3 class='formHeader'>Add Certfication </h3>
-  <div class="row formCert formborder">
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-
-      <div class="form-group">
-        <form @submit.prevent="handleSubmit">
-
-
-          <div class="form-group row">
-            <label for="inputCertification">Certification Name:</label>
-            <div class="col-sm-10 col-md-9 col-lg-10">
-              <input type="text" class="form-control" id="inputCertification" v-model="certrecord.certAgency">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputAgency">Certification Agency:<br></label>
-            <div class="col-sm-10 col-md-9 col-lg-10">
-              <input type="text" class="form-control" id="inputAgency" v-model="certrecord.certName">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <label for="inputExpiration">Certification Expiration in Years:</label>
-              <div class="col-sm-10 col-md-9 col-lg-10">
-              <input type="text" class="form-control" id="inputExpiration" v-model="certrecord.cerDefaultExp">
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Add Certification</button>
-            </div>
-          </div>
-          </form>
-        </div>
-</div>
-</div>
 
 
 
@@ -156,7 +96,6 @@
 
 
 </main>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 <footer></footer>
 </body>
